@@ -1,0 +1,138 @@
+:root {
+	--accent: #54c183;
+	--background: #181a1b;
+	--navigation: #333333;
+	--hover: #8dc1a3;
+	--graytext: #999999;
+}
+
+@font-face {
+	font-family: InterMedium;
+	src: url('latin.woff2');
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: InterMedium;
+	background: var(--background);
+	color: white;
+}
+
+.navbar {
+	overflow: hidden;
+	background: var(--navigation);
+	padding: 5px;
+	margin: 7px;
+	margin-top: 15px;
+	border-radius: 4px;
+}
+
+a {
+	color: var(--accent);
+	text-decoration: none;
+	text-align: center;
+}
+
+ul, ol{
+	list-style-position: inside;
+	padding-left: 30px;
+}
+
+.navbar a, .side a {
+	float: left;
+	display: block;
+	padding: 14px 14px;
+}
+
+a:hover {
+	color: var(--hover);
+	scale: 110%;
+}
+
+.side {
+	flex: 30%;
+	background: var(--navigation);
+	padding: 30px;
+	max-width: 270px;
+}
+
+.main {
+	flex: 70%;
+	padding: 30px 50px;
+	align-content: center;
+}
+
+.footer {
+	padding: 8px;
+	text-align: center;
+	background: var(--navigation);
+	position: static;
+	font-size: 8px;
+	color: var(--graytext);
+}
+
+#homebutton #pfp {
+	width: 50px;
+	height: auto;
+	position: relative;
+	top: -8px;
+}
+
+#homebutton {
+	padding-left: 11px;
+	width: 70px;
+	scale: 80%;
+	height: 48px;
+}
+
+#homebutton:hover {
+	scale: 96%;
+}
+
+#freetimelist {
+	list-style-image: url(like.png);
+}
+
+@media screen and (max-width: 510px) {
+	.row {
+		flex-direction: column;
+	}
+	.navbar a {
+		float: none;
+		width: 100%;
+	}
+	#homebutton {
+		padding-bottom: 30px;
+		width: auto;
+	}
+}
+
+@media screen and (max-width:350px) {
+	ul,ol {
+		padding-left: 0;
+	}
+}
+
+@media screen and (max-width:300px) {
+	* {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width:250px) {
+	* {
+		font-size: 10px;
+	}
+}
+
+@media screen and (max-width:200px) {
+	* {
+		font-size: 7px;
+	}
+	#homebutton {
+		scale: 60%;
+	}
+}
